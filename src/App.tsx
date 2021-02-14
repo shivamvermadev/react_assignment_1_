@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Form from './form';
 import * as data from './mock.json';
+import User from './images/user_1.svg'
 
 function App() {
   let word = data.todo;
@@ -17,10 +18,13 @@ function App() {
         </div>
         <h3>{curElement.heading}</h3>
         <p className="primary-light"> {curElement.p}</p>
-        <div className="card-inner-data">
+        <div className="card-inner-data last-child">
           <div>
             <p>Assignee</p>
-            <p>{curElement.name} </p>
+            <div className="card-inner-data-image">
+              <img src={User} alt="" />
+              <p>{curElement.name} </p>
+            </div>
           </div>
           <div>
             <p>Status</p>
@@ -34,7 +38,7 @@ function App() {
 
   const ans2 = word1.map((curElement: any, index: any) => {
     return (
-      <div className="card box-shadow" key = {index}>
+      <div className="card box-shadow" key={index}>
         <div className="card-inner-data">
           <div className="py-2"> ID: {curElement.id} </div>
           <div className="py-2 primary-light">{curElement.date} </div>
@@ -44,7 +48,10 @@ function App() {
         <div className="card-inner-data">
           <div>
             <p>Assignee</p>
-            <p>{curElement.name} </p>
+            <div className="card-inner-data-image">
+              <img src={User} alt="" />
+              <p>{curElement.name} </p>
+            </div>
           </div>
           <div>
             <p>Status</p>
@@ -67,7 +74,10 @@ function App() {
         <div className="card-inner-data">
           <div>
             <p>Assignee</p>
-            <p>{curElement.name} </p>
+            <div className="card-inner-data-image">
+              <img src={User} alt="" />
+              <p>{curElement.name} </p>
+            </div>
           </div>
           <div>
             <p>Status</p>
