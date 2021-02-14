@@ -32,9 +32,9 @@ function App() {
   });
 
 
-  const ans2 = word1.map((curElement: any) => {
+  const ans2 = word1.map((curElement: any, index: any) => {
     return (
-      <div className="card box-shadow">
+      <div className="card box-shadow" key = {index}>
         <div className="card-inner-data">
           <div className="py-2"> ID: {curElement.id} </div>
           <div className="py-2 primary-light">{curElement.date} </div>
@@ -55,9 +55,9 @@ function App() {
     )
   });
 
-  const ans3 = word2.map((curElement: any) => {
+  const ans3 = word2.map((curElement: any, index: any) => {
     return (
-      <div className="card box-shadow">
+      <div className="card box-shadow" key={index}>
         <div className="card-inner-data">
           <div className="py-2"> ID: {curElement.id} </div>
           <div className="py-2 primary-light">{curElement.date} </div>
@@ -78,51 +78,51 @@ function App() {
     )
   });
 
-  let form = (
-    <div id="container">
-      <div className="form-wrap">
-        <form className="form">
-          <div className="form-flex-items">
-            <div className="form-group">
-              <label htmlFor="components">Componets/s:</label>
-              <input type="text" name="firstName" id="components" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="label">Label:</label>
-              <input type="text" name="lastName" id="label" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="sprint">Sprint:</label>
-              <input type="email" name="email" id="sprint" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="story-points">Story Points:</label>
-              <input type="password" name="password" id="story-points" />
-            </div>
-          </div>
-          <div className="form-flex-items">
-            <div className="form-group">
-              <label htmlFor="assignee">Assignee:</label>
-              <input type="password" name="pasword2" id="assignee" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="reporter">Reporter:</label>
-              <input type="password" name="pasword2" id="reporter" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="description">Description:</label>
-              <input type="password" name="pasword2" id="description" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="Attatchment">Attatchment:</label>
-              <input type="password" name="pasword2" id="Attatchment" />
-            </div>
-            <button type="submit" className="btn">Sign Up</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
+  // let form = (
+  //   <div id="container">
+  //     <div className="form-wrap">
+  //       <form className="form">
+  //         <div className="form-flex-items">
+  //           <div className="form-group">
+  //             <label htmlFor="components">Componets/s:</label>
+  //             <input type="text" name="firstName" id="components" />
+  //           </div>
+  //           <div className="form-group">
+  //             <label htmlFor="label">Label:</label>
+  //             <input type="text" name="lastName" id="label" />
+  //           </div>
+  //           <div className="form-group">
+  //             <label htmlFor="sprint">Sprint:</label>
+  //             <input type="email" name="email" id="sprint" />
+  //           </div>
+  //           <div className="form-group">
+  //             <label htmlFor="story-points">Story Points:</label>
+  //             <input type="password" name="password" id="story-points" />
+  //           </div>
+  //         </div>
+  //         <div className="form-flex-items">
+  //           <div className="form-group">
+  //             <label htmlFor="assignee">Assignee:</label>
+  //             <input type="password" name="pasword2" id="assignee" />
+  //           </div>
+  //           <div className="form-group">
+  //             <label htmlFor="reporter">Reporter:</label>
+  //             <input type="password" name="pasword2" id="reporter" />
+  //           </div>
+  //           <div className="form-group">
+  //             <label htmlFor="description">Description:</label>
+  //             <input type="password" name="pasword2" id="description" />
+  //           </div>
+  //           <div className="form-group">
+  //             <label htmlFor="Attatchment">Attatchment:</label>
+  //             <input type="password" name="pasword2" id="Attatchment" />
+  //           </div>
+  //           <button type="submit" className="btn">Sign Up</button>
+  //         </div>
+  //       </form>
+  //     </div>
+  //   </div>
+  // );
 
   return (
     <div>
@@ -141,9 +141,8 @@ function App() {
         </div>
       </div>
       <div className="form-container">
-        {form}
+        <Form></Form>
       </div>
-      {Form}
     </div>
   );
 }
