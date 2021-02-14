@@ -661,6 +661,14 @@ a:hover {
 }
 
 
+@media(max-width: 359px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-grid .card {
+    height: 280px;
+  }
+}
 
 
 @media(max-width: 1024px) and (min-width: 769px) {
